@@ -117,7 +117,7 @@ def inference(cfg):
     inference_data_iter = iter(inference_data_loader)
     for i in range(len(inference_data_loader)):
         img, name = inference_data_iter.next()
-        model.train()
+        model.eval()
         result = model(img.cuda())
         pred = torch.where(result> 0.5, 1, 0)
         if pred[0].item() == 0:
