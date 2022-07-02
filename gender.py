@@ -4,7 +4,6 @@ import torch.nn as nn
 from torchvision.models import resnet18
 from torch.utils.data import Dataset, DataLoader
 from torchvision.transforms import Compose, Normalize, ToTensor, Resize
-from torch.utils.data import DataLoader
 import cv2
 
 """
